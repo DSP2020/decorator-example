@@ -1,6 +1,6 @@
 package com.iteso.decorator.condiments.meat;
 
-import com.iteso.decorator.CondimentsDecorator;
+import com.iteso.decorator.tacos.CondimentsDecorator;
 import com.iteso.decorator.Taco;
 
 /**

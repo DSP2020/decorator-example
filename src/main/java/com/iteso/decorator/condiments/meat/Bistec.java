@@ -1,6 +1,6 @@
 package com.iteso.decorator.condiments.meat;
 
-import com.iteso.decorator.CondimentsDecorator;
+import com.iteso.decorator.tacos.CondimentsDecorator;
 import com.iteso.decorator.Taco;
 
 /**
@@ -19,7 +19,9 @@ public class Bistec extends CondimentsDecorator{
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + " de bistec";
+        String description;
+        description = new String(taco.getDescription() + " de bistec");
+        return description;
     }
 
     @Override

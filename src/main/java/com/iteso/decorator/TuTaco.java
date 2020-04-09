@@ -1,5 +1,7 @@
 package com.iteso.decorator;
 
+import com.iteso.decorator.behaviors.Behavior1;
+import com.iteso.decorator.behaviors.Behavior2;
 import com.iteso.decorator.condiments.Cebolla;
 import com.iteso.decorator.condiments.Cilantro;
 import com.iteso.decorator.condiments.TortillaHarina;
@@ -21,16 +23,25 @@ public class TuTaco {
         Taco taco = new TacoBase();
         System.out.println(taco.getDescription());
         System.out.println("$" + taco.cost() + " MXN");
+        taco.setNotDefined(new Behavior1());
+        System.out.println(taco.getNotDefined().printBehavior());
+        taco.setNotDefined(new Behavior2());
+        System.out.println(taco.getNotDefined().printBehavior());
+
 
         taco = new TortillaMaiz(taco);
         taco = new Chorizo(taco);
         taco = new Cebolla(taco);
         taco = new Cilantro(taco);
 
+
+
         System.out.println();
         System.out.println();
         System.out.println(taco.getDescription());
         System.out.println("$" + taco.cost() + " MXN");
+        taco.setNotDefined(new Behavior1());
+        System.out.println(taco.getNotDefined().printBehavior());
 
         Taco taco2 = new Burrito();
 

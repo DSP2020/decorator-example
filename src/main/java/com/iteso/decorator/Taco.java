@@ -8,6 +8,7 @@ package com.iteso.decorator;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Taco {
+    private Behavior notDefined;
     public String description = "Any Taco";
     public String getDescription(){
         return description;
@@ -15,4 +16,11 @@ public abstract class Taco {
     public abstract double cost();
 
 
+    public Behavior getNotDefined() {
+        return notDefined;
+    }
+
+    public void setNotDefined(Behavior notDefined) {
+        this.notDefined = notDefined;
+    }
 }

@@ -1,4 +1,6 @@
-package com.iteso.decorator;
+package com.iteso.decorator.tacos;
+
+import com.iteso.decorator.Taco;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,4 +11,5 @@ package com.iteso.decorator;
  */
 public abstract class CondimentsDecorator extends Taco {
     public abstract String getDescription();
+    public abstract Taco getOriginalTaco();
 }
